@@ -1,0 +1,284 @@
+.contact-center{
+    position:absolute;
+    margin-top:140px;
+
+}
+.contact-center img{
+    height:500px;
+    width:1200px;
+    margin-left:100px;
+}
+.contact-center h1{
+    position:absolute;
+    margin-top:-340px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:45%;
+    font-size:50px;
+    
+}
+.contact-center p{
+    position:absolute;
+    margin-top:-270px;
+    color:white;
+    font-family: sans-serif;
+    margin-left:33%;
+    font-size:19px;
+    text-align:center;
+    
+}
+.contact-center .contact-wrapper{
+    position:absolute;  
+    height:500px;
+    width:1200px;
+    margin-left:100px;
+    background-color: rgba(183, 183, 183, 0.368);
+    box-shadow:0 0 3px 3px rgb(212, 211, 211);
+}
+.contact-form{
+    position:absolute;
+    height:600px;
+    width: 100ex;
+    margin-left:100px;
+    margin-top:55%;
+    background-color: rgba(131, 131, 131, 0.132);
+
+}
+
+.form-heading{
+    position:absolute;
+    margin-top:50%;
+    margin-left: 8%;
+}
+.inner-form{
+    position:absolute;
+    margin-top:8%;
+    margin-left: 9%;
+    background-color:none;
+    height:450px;
+    width:650px;
+
+}
+.contact-form .inner-form span{
+    color:blue;
+    font-size:18px;
+    font-weight: 700;
+}
+.contact-form .inner-form .right-top-input{
+  position: absolute;
+  margin-left:350px;
+  margin-top:10px;
+  
+}
+.contact-form .inner-form .right-top-input label{
+    position:relative;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.contact-form .inner-form .right-top-input input{
+    position:absolute;
+    border:none;
+    background-color:transparent;
+    width:300px;
+    height:35px;
+    margin-top: 6px;;
+    font-size:17px;
+    border-bottom: 2px solid rgba(110, 110, 110, 0.707)
+}
+.contact-form .inner-form .right-bottom-input{
+    position: absolute;
+    margin-left:350px;
+    margin-top:100px;
+    
+  }
+  .contact-form .inner-form .right-bottom-input label{
+      position:relative;
+      font-size: 17px;
+      padding: 0px 0px;
+      margin-bottom: 60px;
+  }
+  .contact-form .inner-form .right-bottom-input input{
+      
+      border:none;
+      background-color: transparent;
+      width:300px;
+      height:35px;
+      margin-top: 6px;;
+      font-size:17px;
+      border-bottom: 2px solid rgba(110, 110, 110, 0.707)
+  }
+  .contact-form .inner-form .left-top-input{
+    position: absolute;
+    margin-left:0px;
+    margin-top:10px;
+    
+  }
+  .contact-form .inner-form .left-top-input label{
+      position:relative;
+      font-size: 17px;
+      padding: 0px 0px;
+      margin-bottom: 60px;
+  }
+  .contact-form .inner-form .left-top-input input{
+      
+      border:none;
+      background-color: transparent;
+      width:300px;
+      height:35px;
+      margin-top: 6px;;
+      font-size:17px;
+      border-bottom: 2px solid rgba(110, 110, 110, 0.707)
+  }
+  .contact-form .inner-form .left-bottom-input{
+    position: absolute;
+    margin-left:0px;
+    margin-top:100px;
+    
+  }
+  .contact-form .inner-form .left-bottom-input label{
+      position:relative;
+      font-size: 17px;
+      padding: 0px 0px;
+      margin-bottom: 60px;
+  }
+  .contact-form .inner-form .left-bottom-input input{
+      
+      border:none;
+      background-color: transparent;
+      width:300px;
+      height:35px;
+      margin-top: 6px;;
+      font-size:17px;
+      border-bottom: 2px solid rgba(110, 110, 110, 0.707);
+  }
+  .contact-form .inner-form .messege{
+    position: absolute;
+    margin-top:200px;
+  }
+  .contact-form .inner-form .messege label{
+    position:relative;
+    font-size: 17px;
+
+  }
+  .contact-form .inner-form .messege textarea{
+    background-color: transparent;
+    border:2px solid rgba(110, 110, 110, 0.707);
+    margin-top:30px
+  }
+  .contact-form .inner-form button{
+    margin-top:400px;
+    margin-left: 0%;
+    padding: 10px 50px;
+    font-size: 17px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: rgb(0, 0, 255);
+    color:white;
+    border: none;
+  }
+  .contact-form .inner-form button:hover{
+    background-color: rgba(255, 255, 255, 0.68);
+    cursor:pointer;
+    color:blue;
+    border:2px solid blue;
+    transition: .1s step-end;
+  }
+  .contact-form .my-info{
+    margin-top: -20px;
+    margin-left:100%;
+    background-color:blue;
+    height:600px;
+    width: 400px;
+  }
+  .contact-form .my-info .my-info-inner-form{
+
+    margin-left: 5%;
+    background-color:blue;
+    height:400px;
+    width:370px;
+    margin-top: -10%;
+
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-contact img{
+    position:absolute;
+    height:5vh;
+    border-radius:50%;
+    margin-left:0%;
+    margin-top:40px;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-contact span{
+    position:absolute;
+    margin-top:42px;
+    margin-left:5%;
+    font-size:19px;
+    color: white;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-contact p{
+    position:absolute;
+    margin-top:40px;
+    margin-left:20%;
+    color:white;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-email img{
+    position:absolute;
+    height:5vh;
+    border-radius:50%;
+    margin-left:0%;
+    margin-top:80px;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-email span{
+    position:absolute;
+    margin-top:82px;
+    margin-left:5%;
+    font-size:19px;
+    color: white;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-email p{
+    position:absolute;
+    margin-top:83px;
+    margin-left:20%;
+    color:white;
+    font-size:17px;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-location img{
+    position:absolute;
+    height:5vh;
+    border-radius:50%;
+    margin-left:0%;
+    margin-top:140px;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-location span{
+    position:absolute;
+    margin-top:141px;
+    margin-left:5%;
+    font-size:19px;
+    color: white;
+  }
+  .contact-form .my-info .my-info-inner-form .my-info-location p{
+    position:absolute;
+    margin-top:170px;
+    margin-left:5%;
+    color:white;
+    font-size:17px;
+  }
+  .contact-form .my-info .my-info-heading{
+    
+    color:aliceblue;
+    margin-top:20px;
+    margin-left:20px;
+    padding:50px 20px;
+  }
+  .follow-us-on img{
+      height:5vh;
+      margin-left:15px;
+      cursor: pointer;
+  }
+  .follow-us-on{
+    position: absolute;
+    margin-top:104%;
+    margin-left:40%;
+}
+
+
+
+
