@@ -12,28 +12,25 @@ import "../styles/Home-footer.css"
 
 
 function Main(){
+
      useEffect(()=>{
         AOS.init({duration: 2000})
      },[])
+
 
     return(
     <div>
        
        <div class="main" data-aos="fade-right">
-           <h5>Farm Equipment Rental</h5>
+          <h5>Farm Equipment Rental</h5>
            <p>We will provide farm equipment rentals to advance the productivity of your Farm<br></br>
            A great opportunity for starting an online agricultural equipment Rental Platform.</p>
            <span>Lets, grow your business....</span><br></br>
            <button>Rent Now</button>
        </div>
-      <div className="container">
-            <div class="slide-button">
-               <a className="prev" >&#10094;</a>
-               <a className="next" >&#10095;</a>
-            </div>
-      </div>
+
       <h1 class="heading">Our Brands</h1>
-      <hr></hr>
+      <hr class="hr"></hr>
       <div class="products" data-aos="fade-up">
                 <div class="item1">
                     <img class="harvestor"src={Grass_cutter} alt="not appear"/>
@@ -78,6 +75,7 @@ function Main(){
             <h2>Global Agricutural  Equipment Market</h2>
                <img class="agri-market-img" src={Market} />
             </div>
+            
             <Footer />
             
     </div>

@@ -1,6 +1,5 @@
 import {Route,Routes } from "react-router-dom";
-import Login from "./Components/login";
-import Signup from "./Components/signup"
+import SignupUpdated from "./Components/signup-mithun"
 import Dashboard from "./Components/dashboard/Dashboard";
 import Privacy_Policy from "./Components/privacy_policy";
 import Products from "./Components/products";
@@ -8,6 +7,7 @@ import Contact from "./Components/contact"
 import Blogs from "./Components/blogs"
 import Marketplace from "./Components/marketplace"
 import About from "./Components/about";
+import LoginUpdated from "./Components/login-mithun";
 
 
 
@@ -17,8 +17,8 @@ function App() {
       
       <Routes>
 
-          <Route path="signin" element={<Login/>}></Route>
-          <Route path="signup" element={<Signup/>}></Route>
+          <Route path="signin" element={<LoginUpdated/>}></Route>
+          <Route path="signup" element={<SignupUpdated/>}></Route>
           <Route path="/" element={<Dashboard/>}></Route>
           <Route path="products" element={<Products />}></Route>
           <Route path="marketplace" element={<Marketplace />}></Route> 

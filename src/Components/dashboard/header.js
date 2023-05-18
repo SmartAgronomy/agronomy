@@ -9,15 +9,16 @@ import settings from "../Images/settings_logo.jpeg"
 import FAQ from "../Images/FAQ_logo.jpeg"
 import sign_in from "../Images/sign_in.jpg"
 import Website_logo from "../Images/Rent_logo-removebg-preview.png"
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 function Header(){
 
 
-    const subMenu=document.getElementById("subMenu");
-  function toggleMenu(){
-    subMenu.classList.toggle('open-menu');
-  }
+  //   const subMenu=document.getElementById("subMenu");
+  // function toggleMenu(){
+  //   subMenu.classList.toggle('open-menu');
+  // }
 
     return(
     <header>
@@ -111,9 +112,9 @@ function Header(){
           </nav>
           
         
-        <img class="bar" src={bars} onClick={toggleMenu} />
+        {/* <img class="bar" src={bars} onClick={toggleMenu} /> */}
   
-          <div class="sub-menu-wrap" >
+          {/* <div class="sub-menu-wrap" >
             <div class="sub-menu"  id="subMenu">
               <Link to="#" class="sub-menu-link">
                 <img src={reports} />
@@ -157,7 +158,7 @@ function Header(){
                 
               </Link>
             </div>
-          </div>
+          </div> */}
           <div class="logo">
           <img class="website_logo" src={Website_logo} />
           </div>

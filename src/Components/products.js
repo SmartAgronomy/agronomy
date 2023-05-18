@@ -25,6 +25,49 @@ function Products(){
                     <img src={_____products_cat} />
                </div>
             </div>
+
+            <div class="one-cat">
+                <div class="one-cat-head">
+                   <label>Pumps and Motors..</label>
+                   <button>View All</button>
+                </div>
+                <div class="img">
+                    <img src={_products_cat} />
+                    <img src={__products_cat} />
+                    <img src={___products_cat} />
+                    <img src={____products_cat} />
+                    <img src={_____products_cat} />
+               </div>
+            </div>
+
+        
+            <div class="one-cat">
+                <div class="one-cat-head">
+                   <label>Electrical Power Equipments..</label>
+                   <button>View All</button>
+                </div>
+                <div class="img">
+                    <img src={_products_cat} />
+                    <img src={__products_cat} />
+                    <img src={___products_cat} />
+                    <img src={____products_cat} />
+                    <img src={_____products_cat} />
+               </div>
+            </div>
+
+            <div class="one-cat">   
+                <div class="one-cat-head">
+                   <label>Crop Processors..</label>
+                   <button>View All</button>
+                </div>
+                <div class="img">
+                    <img src={_products_cat} />
+                    <img src={__products_cat} />
+                    <img src={___products_cat} />
+                    <img src={____products_cat} />
+                    <img src={_____products_cat} />
+               </div>
+            </div>
            
             <Products_Footer />
         </div>

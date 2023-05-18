@@ -6,7 +6,7 @@ import Blogs from "./blogs"
 import Marketplace from "./marketplace"
 import Products from "./products"
 import Dashboard from "./dashboard/Dashboard";
-import Login from "./login";
+import LoginUpdated from "./login-mithun";
 import Signup from "./signup"
 
 
@@ -15,7 +15,7 @@ function Links(){
     return(
         <div>
                <Routes>
-                 <Route exact path="signin"  Component={Login}/>
+                 <Route exact path="signin"  Component={LoginUpdated}/>
                  <Route path="signup" Component={Signup}/>
                  <Route path="/" Component={Dashboard}/>
                  <Route path="blogs" Component={Blogs } />

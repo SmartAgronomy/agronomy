@@ -12,7 +12,7 @@
 }
 .sign-up-form label{
     font-weight: 600;
-    margin-bottom: 100px;
+    margin-bottom:0px;
 }
 .sign-up-form input{
     height:30px;

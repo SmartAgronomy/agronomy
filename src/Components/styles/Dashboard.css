@@ -34,6 +34,8 @@
     }
 } */
 
+  
+
 .website_logo{
     height:400px;
     width:300px;
@@ -56,11 +58,12 @@
     margin-top:60px;
 }
 nav{
-    margin-top:60px;
+    margin-top:70px;
+    -webkit-margin-top-collapse: collapse;
     opacity:0.9;
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(0, 50, 5);
     position:fixed;
-    display:inline-block;
+    display:block;
     width:100%;
     
    
@@ -83,6 +86,7 @@ nav ul{
     margin-right:23%;
     line-height: 20px;
     padding:0px;
+    margin-top: 10px;
     
 }
 nav ul li a{
@@ -112,7 +116,7 @@ nav ul li a{
    
 }
 .home-underline{
-  position:absolute;
+  position:fixed;
   width:70px;
   height:1.5px;
   background-color:orangered;
@@ -137,33 +141,36 @@ nav ul li a:hover::after{
     position: absolute;
     margin-left:80%;
 
+
 }
 
 
 nav button{
     margin-right: 25px;
-    padding:8px 16px;
-    margin-top:10px;
-    background-color: rgb(128, 255, 0);
+    padding:7px 16px;
+    margin-top:5px;
+    background-color:transparent;
     font-size: 15px;
     border-radius: 10px;
-    color:rgb(0, 0, 0);
-    border:none;
-    font-family: 'Times New Roman', Times, serif;
+    color:rgb(255, 255, 255);
+    border:0px solid rgb(255, 255, 255);
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
 nav button:hover{
-    background-color: rgb(217, 255, 0);
+    background-color:rgba(2, 108, 13, 0.278);
     cursor:pointer;
     transform:scale(1.1);
     font-size: 15px;
     font-weight: bold;
+    padding:7px 16px;
    
 }
 
 
 nav button:active{
     transform:translate(0.1em,0.1em);
+    padding:7px 16px;
 }
 .logo{
     width:15vh;
@@ -190,7 +197,7 @@ background-color:rgba(31, 186, 31, 0.74);
 }
 
 ::-webkit-input-placeholder{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .search_bar .search-btn{
     padding:7px 20px;
@@ -254,15 +261,16 @@ background-color:rgba(31, 186, 31, 0.74);
 .sub-menu{
     background-color: rgb(241, 239, 239);
     margin-left:80%;
-    position:absolute;
+    position:sticky;
     width:250px;
-    margin-top:100px;
+    margin-top:10px;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s;
 }
 .sub-menu.open-menu{
-    margin-top:120px;
+    position:absolute;
+    margin-top:10px;
     max-height: 400px;
     border-radius: 10px;;
 }
@@ -300,19 +308,19 @@ background-color:rgba(31, 186, 31, 0.74);
 .sub-menu a:hover p{
     font-weight: 600;
 }
-.bar{
+/* .bar{
     position:fixed;
     height:5vh;
     cursor:pointer;
     margin-left:95%;
     margin-top:70px;
     width:30px;
-}
+} */
 .sub-nav{
     display:none;
 }
 nav ul li:hover .sub-nav{
-    position:absolute;
+    position:sticky;
     display:block; 
     margin-top:1%;
     
@@ -338,7 +346,7 @@ nav ul li:hover .sub-nav{
     background-color: black;
     left:0px;
     padding:3px 0px;
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(0, 50, 5);
     
 }
 .sub-nav ul li a{
@@ -353,7 +361,7 @@ nav ul li:hover .sub-nav{
     position:absolute;
     top:13%;
     display:block;
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(0, 50, 5);
     margin-left:0px;
     
 }
@@ -374,7 +382,7 @@ nav ul li:hover .sub-nav{
 .sub-nav1 ul{
     width:150px;
     position:absolute;
-    background-color: black;
+    background-color: rgb(0, 50, 5);
     left:0px;
     margin-left:170px;
     top:-30px;
@@ -412,11 +420,11 @@ nav ul li:hover .sub-nav{
 .sub-nav2 ul{
     width:170px;
     position:absolute;
-    background-color: black;
+    background-color: rgb(0, 50, 5);
     left:0px;
     margin-left:170px;
     top:10px;
-    background-color:rgb(0, 0, 0);
+
     
     
 }
@@ -452,11 +460,11 @@ nav ul li:hover .sub-nav{
 .sub-nav3 ul{
     width:170px;
     position:absolute;
-    background-color: black;
+    background-color: rgb(0, 50, 5);
     left:0px;
     margin-left:170px;
     top:40px;
-    background-color:rgb(0, 0, 0);
+
     
     
 }
@@ -496,7 +504,7 @@ nav ul li:hover .sub-nav{
     left:0px;
     margin-left:170px;
     top:100px;
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(0, 50, 5);
     
 }
 .sub-nav4 ul li a{
@@ -532,7 +540,7 @@ nav ul li:hover .sub-nav{
 .sub-nav5 ul{
     width:170px;
     position:absolute;
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(0, 50, 5);
     left:0px;
     margin-left:170px;
     top:130px;
@@ -555,7 +563,7 @@ nav ul li:hover .sub-nav_1{
     display:block; 
     margin-top:1%;
     
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 50, 5);
     margin-left:-25px;
     
 }
@@ -571,7 +579,7 @@ nav ul li:hover .sub-nav_1{
 .sub-nav_1 ul{
     width:170px;
     position:absolute;
-    background-color: black;
+    background-color: rgb(0, 50, 5);
     left:0px;
     text-align:center;
     padding:10px 0px;
@@ -588,38 +596,6 @@ nav ul li:hover .sub-nav_1{
 }
 .center{
     background-color:white;
-}
-.container .slide-button{
-    position: absolute;
-    margin-top:-18%;
-    margin-left:0px;
-    width:100%;
-    display: flex;
-    justify-content:space-between;
-    z-index: 5;
-}
-.container .slide-button a{
-    width:40px;
-    height:40px;
-    text-align: center;
-    line-height:40px;
-    vertical-align: middle;
-    align-items: center;
-    cursor: pointer;
-    color:white;
-    background-color: rgba(0, 0, 0, 0.727);
-    font-size:20px;
-    user-select: none;
-
-
-}
-.container .slide-button .prev{
-    border-radius: 0px 5px 5px 0px;
-
-}
-.container .slide-button .next{
-    border-radius: 5px 0px 0px 5px;
-    
 }
 
 .item1{
@@ -691,8 +667,9 @@ height:30vh;
     font-size:15px;
 }
 .products{
-    margin-top:500px;
+    margin-top:70px;
     margin-left:-90px;
+    display: flex;
 }
 .item1:hover{
     transform: scale(1.1);
@@ -728,28 +705,30 @@ height:30vh;
     cursor:pointer;
 }
 .main{
-    position: absolute;
-    margin-left:100px;
+    position: relative;
+    margin-left:-50%;
     text-align:center;
-    margin-top:-400px;
+    margin-top:-350px;
 }
 .main h5{
-    -webkit-text-fill-color:darkturquoise;
+    -webkit-text-fill-color:rgba(41, 2, 2, 0.832);
     font-size:40px;
-    font-family:sans-serif;
+    font-family:fantasy;
     letter-spacing: 0px;
+    font-weight: bold;
+    text-decoration:overline;
+    text-transform: uppercase;
+    letter-spacing: 5px;
     
 
 }
-.main h5:hover{
-    -webkit-text-stroke-color: blwhiteue;
-}
 .main p{
-    color:white;
-    margin-top:-60px;
+    color:rgba(41, 2, 2, 0.832);
+    margin-top:0px;
+    font-weight: 600;
 }
 .main span{
-    color:rgb(255, 255, 255);
+    color:rgba(255, 255, 255, 0.832);
     font-weight: 600;
 }
 .main button{
@@ -772,20 +751,20 @@ height:30vh;
 }
 .heading{
     color:rgb(0, 0, 0);
-    margin-top:30px;
+    margin-top:150px;
     position: absolute;
     text-align: center;
-    margin-left: 44%;
-    font-size: 35px;;
+    margin-left: 0%;
+    font-size: 35px;
+    font-weight: 600;
+    border:2px solid green;
+    width:100%;
+    background-color:#f4f4b42c;
 }
+
 hr{
     position: absolute;
-    height: 5px;
-    width:100px;
-    background-color:green;
-    border: none;
-    margin-top: 80px;
-    margin-left: 44%;
+    height: 100px;
 }
 .more-products{
        margin-top: 750px;
