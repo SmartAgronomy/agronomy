@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter, Link , useNavigate} from "react-router-dom";
 import cart from "../Images/cart.png"
 import bars from "../Images/bars.png"
 import reports from"../Images/reports_logo.webp"
@@ -10,15 +10,26 @@ import FAQ from "../Images/FAQ_logo.jpeg"
 import sign_in from "../Images/sign_in.jpg"
 import Website_logo from "../Images/Rent_logo-removebg-preview.png"
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import Profile from "../profile";
+import { useCookies } from "react-cookie";
 
 function Header(){
+
+  const [cookies, setCookies] = useCookies(["access_token"]);
+  const navigate = useNavigate();
 
 
   //   const subMenu=document.getElementById("subMenu");
   // function toggleMenu(){
   //   subMenu.classList.toggle('open-menu');
+
   // }
+
+  const logout = () => {
+    setCookies("access_token", "");
+    window.localStorage.clear();
+    navigate("/");
+  };
 
     return(
     <header>
@@ -104,11 +115,37 @@ function Header(){
                  <li><Link to="/about">About</Link></li>
                  <li><Link to="/contact">Contact</Link></li>
             </ul>
-            <div class="button">
-               <Link to="/signin" ><button>Sign in</button></Link>
-               <Link to="/signup"><button>Sign Up</button></Link>
-            </div>
+            {/* <div class="button">
+            {!cookies.access_token ? (
+              <Link to="/signin" ><button>Sign in</button></Link>,
+              <Link to="/signup"><button>Sign Up</button></Link>,
+              <Link to="/profile"><button/>Profile</Link>  
+              ) : (
+                <button onClick={logout}> Logout </button>
+              )}
+            </div> */}
             
+            <div class="button">
+                  {!cookies.access_token ? (
+                    <>
+                      <Link to="/signin">
+                        <button>Sign in</button>
+                      </Link>
+                      <Link to="/signup">
+                        <button>Sign Up</button>
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <button onClick={logout}>Logout</button>
+                      <Link to="/profile">
+                        <button>Profile</button>
+                      </Link>
+                    </>
+              )}
+            </div>
+
+
           </nav>
           
         

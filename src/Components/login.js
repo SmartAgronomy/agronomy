@@ -1,75 +1,31 @@
-// import './login.css';
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
 
-// function Login(){
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [errorMessage, setErrorMessage] = useState("");
-//   const [user, setUsers] = useState("");
-
-
-//   const handleUsernameChange = (e) => {
-//     setUsername(e.target.value);
-//   };
-
-//   const handlePasswordChange = (e) => {
-//     setPassword(e.target.value);
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     }
-
-//     // Validate form fields here.
-//     if (!username || !password) {
-//       alert ("Both username and password are required.");
-
-//     }
-
-//     // Submit data to backend.
-//     console.log("Submitting login data...");
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       {errorMessage && <div className="error">{errorMessage}</div>}
-//         <label htmlFor="username">Username</label>
-//         <input type="text" onChange={handleUsernameChange} value={username} />
-//         <label htmlFor="password">Password</label>
-//         <input type="password" onChange={handlePasswordChange} value={password} />
-//       <button type="submit">Login</button>
-//       Not registered<Link to= "/signup">Register Now! </Link>
-      
-//     </form>
-//   )
-// } 
-
-// export default Login;
 
 import { useState } from 'react';
 import "./styles/login.css";
-import { useNavigate,Link, } from "react-router-dom";
 import eyeCloseIcon from "./Images/eye-slash-solid.svg"
 import eyeOpenIcon from "./Images/eye-regular.svg"
 import login_back from "./Images/login-background.jpeg"
+import { useNavigate,Link, } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useCookies } from "react-cookie";
 import { useEffect } from 'react'
 
 
-function Login() {
+
+
+
+function LoginUpdated() {
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showPassword ,setshowPassword] = useState(false);
   const navigate = useNavigate();
+  const [_, setCookies] = useCookies(["access_token"]);
 
   useEffect(()=>{
     AOS.init({duration :2000})
  },[])  
-
 
   const handleemailChange = (e) => {
     setemail(e.target.value);
@@ -102,43 +58,39 @@ function Login() {
         throw new Error("Incorrect username or password");
       }
 
-      // Successful login.
-      setIsLoggedIn(true);
+      const responseData = await response.json(); // Parse the response as JSON
+
+      setCookies("access_token", responseData.token);
+      window.localStorage.setItem("userID", responseData.userID);
+      navigate("/");
     } catch (error) {
-      setErrorMessage(error.message);
+      console.error(error);
     }
   };
 
-  if(isLoggedIn){
-    navigate('/')
-  }
+
  
 
   return (
     <div class="body">
     <div data-aos="fade-left" >
     <form class="login-form" onSubmit={handleSubmit}>
-      <h1>Sign in</h1>
+    <h1>Sign in</h1>
       <p>Type your user name and password here.</p><br></br>
       {errorMessage && <div className="error">{errorMessage}</div>}
-
-      <input type="text" name="email" onChange={handleemailChange} value={email} placeholder="User name" />
+      <input type="text" name="email" placeholder='E-mail' onChange={handleemailChange} value={email} />
       <div className="password-wrapper">
-        <input type={showPassword ? "text" : "password"} name="password" onChange={handlePasswordChange} value={password} placeholder="Password" id="pass" />
+        <input type={showPassword ? "text" : "password"} name="password" onChange={handlePasswordChange} value={password} placeholder="Password" id="pass"/>
         <div class="eye-toggle" onClick={() => setshowPassword(!showPassword)}>
            {showPassword ? <img class="hide-pass" alt="Eye icon(opened)" src={eyeOpenIcon} /> : <img class="hide-pass" alt="Eue-icon(closed)" src={eyeCloseIcon} />}
         </div>
-          
-        
       </div>
       <input class="checkbox" type="checkbox" required="true" />
       <span>I agree <Link>Terms and Conditions</Link> and <Link to="/privacy_policy">Privacy policy</Link></span><br></br>
-      <button type="submit">Sign in</button><br></br>
-      <br></br>
+      <button type="submit">Login</button><br></br><br></br>
       <div class="not-registered">
-      Not registered? <Link to= "/signup">Register Now! </Link>
+      Not registered<Link to= "/signup">Register Now! </Link>
       </div>
-      
     </form>
     <div>
       <img class="login-back" alt="Login Background" src={login_back} />
@@ -153,4 +105,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginUpdated;
