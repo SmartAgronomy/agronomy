@@ -47,6 +47,9 @@ function Header(){
           <img class="cart" src={cart} />
         <nav >
             <ul>
+
+            <li><Link to="admin">admin</Link></li>
+
                  <li><Link to="/" class="root">Home</Link></li>
                  <hr class="home-underline"></hr>
                  
@@ -120,6 +123,9 @@ function Header(){
                  </li>
                  <li><Link to="/about">About</Link></li>
                  <li><Link to="/contact">Contact</Link></li>
+                 
+                
+
             </ul>
             {/* <div class="button">
             {!cookies.access_token ? (
@@ -140,6 +146,7 @@ function Header(){
                       <Link to="/signup">
                         <button>Sign Up</button>
                       </Link>
+                      
                     </>
                   ) : (
                     <>

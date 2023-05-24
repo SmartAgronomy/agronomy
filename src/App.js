@@ -9,6 +9,8 @@ import Marketplace from "./Components/marketplace"
 import About from "./Components/about";
 import LoginUpdated from "./Components/login";
 import Profile from "./Components/profile";
+import Admin from "./Components/admin";
+import AdminLogin from "./adminlogin";
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path="marketplace" element={<Marketplace />}></Route> 
           <Route path='contact' element={<Contact />}></Route>
           <Route path="about" element={<About /> } ></Route>
+          <Route path="admin" element={<Admin />}></Route>
+          <Route path="adminlogin" element={<AdminLogin />}></Route>
           <Route path="blogs" element={<Blogs /> }></Route>
           <Route path="privacy_policy" element={<Privacy_Policy /> }></Route>
           <Route path="profile" element={<Profile/>}></Route>

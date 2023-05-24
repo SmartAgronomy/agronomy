@@ -69,7 +69,7 @@
 }
 .hide-pass{
    height:2vh;
-   margin-left: 270px;
+   margin-left: -290px;
    margin-top: -55px;
    position: absolute;
    cursor: pointer;
