@@ -38,7 +38,11 @@ const userSchema = new mongoose.Schema({
   city:{
     type: String,
     required: true
-  }
+  },
+  role: {
+    type: Number,
+    default: 0
+}
 });
 
 const User = mongoose.model('User', userSchema);
