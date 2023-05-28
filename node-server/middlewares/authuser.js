@@ -1,4 +1,4 @@
-const express = require('express');
+
 const jwt = require('jsonwebtoken');
 const secretKey = 'secretkeymithun';
 // Validation middleware
@@ -27,6 +27,7 @@ const verifyToken = (req, res, next) => {
         return res.sendStatus(403);
       }
       req.user = { userId: decoded.userId };
+    
       next(); // Call the next middleware or route handler
     });
   } else {

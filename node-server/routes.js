@@ -3,7 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const secretKey = 'secretkeymithun';
 const User = require('./models/User');
-const {verifyToken, validateUser} = require('./middlewares');
+const {verifyToken, validateUser} = require('./middlewares/authuser');
 
   
   // Create user endpoint
@@ -52,7 +52,19 @@ const {verifyToken, validateUser} = require('./middlewares');
   
     // Generate JWT token and send back to client
     const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
-    res.json({ token, userID: user._id });
+
+    let isAdmin = false;
+    let role = user.role;
+  
+    // Check if the user is an admin
+    if (role === 1) {
+      isAdmin = true;
+    }
+  
+    // Update the user's cart and other data here if needed
+  
+    // Send the token, userID, role, and isAdmin to the client
+    res.json({ token, userID: user._id, role, isAdmin });
   });
   
   // Profile endpoint
