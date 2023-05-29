@@ -37,9 +37,9 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const routes = require('./routes');
-const productRoutes = require('./productRoutes');
-const categoryRoutes = require('./categoryRoutes');
+const routes = require('./routes/userroutes');
+const productRoutes = require('./routes/productRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 
 main().catch((err) => console.log(err));
 

@@ -2,14 +2,16 @@
 
 import { useState } from 'react';
 import "./styles/login.css";
-import eyeCloseIcon from "./Images/eye-slash-solid.svg"
-import eyeOpenIcon from "./Images/eye-regular.svg"
-import login_back from "./Images/login-background.jpeg"
+import eyeCloseIcon from "../Images/eye-slash-solid.svg"
+import eyeOpenIcon from "../Images/eye-regular.svg"
+import login_back from "../Images/login-background.jpeg"
 import { useNavigate,Link, } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCookies } from "react-cookie";
 import { useEffect } from 'react'
+import useUserAPI from '../useUserApi';
+
 
 
 
@@ -22,6 +24,8 @@ function LoginUpdated() {
   const [showPassword ,setshowPassword] = useState(false);
   const navigate = useNavigate();
   const [_, setCookies] = useCookies(["access_token"]);
+  const { isLogged, isAdmin } = useUserAPI();
+
 
   useEffect(()=>{
     AOS.init({duration :2000})
@@ -99,6 +103,8 @@ function LoginUpdated() {
       </h1></div>
       <div class="login-back-p"><p>We standed by the farmers with the <br></br>billions of equipments we spend <br></br>on agriculture every year.</p></div>
       <button class="login-back-img">Sign in Now &#10095;&#10095;</button>
+      {isLogged && <p>Welcome, logged-in user!</p>}
+      {isAdmin && <p>You have admin privileges.</p>}
     </div>
     </div>
     </div>

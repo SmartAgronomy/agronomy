@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import "bootstrap/dist/css/bootstrap.css";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
-import Home_Picture1 from "./Images/home_picture1.jpg"
-import Home_Picture4 from "./Images/Home_Picture4.png"
-import Home_Picture2 from "./Images/login-background.jpeg"
+import Home_Picture1 from "../Images/home_picture1.jpg"
+import Home_Picture4 from "../Images/Home_Picture4.png"
+import Home_Picture2 from "../Images/login-background.jpeg"
 import "./styles/backgroundSlider.css"
 
 function ControlledCarousel() {

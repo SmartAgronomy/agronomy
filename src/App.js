@@ -1,15 +1,15 @@
 import {Route,Routes } from "react-router-dom";
-import SignupUpdated from "./Components/signup"
+import SignupUpdated from "./Components/pages/signup"
 import Dashboard from "./Components/dashboard/Dashboard";
-import Privacy_Policy from "./Components/privacy_policy";
-import Products from "./Components/products";
-import Contact from "./Components/contact"
-import Blogs from "./Components/blogs"
-import Marketplace from "./Components/marketplace"
-import About from "./Components/about";
-import LoginUpdated from "./Components/login";
-import Profile from "./Components/profile";
-import Admin from "./Components/admin";
+import Privacy_Policy from "./Components/pages/privacy_policy";
+import Products from "./Components/pages/products";
+import Contact from "./Components/pages/contact"
+import Blogs from "./Components/pages/blogs"
+import Marketplace from "./Components/pages/marketplace"
+import About from "./Components/pages/about";
+import LoginUpdated from "./Components/pages/login";
+import Profile from "./Components/pages/profile";
+import Admin from "./Components/pages/admin";
 import AdminLogin from "./adminlogin";
 
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useCookies } from "react-cookie";
+import useUserAPI from "../useUserApi";
 
 const Admin = () => {
   const [products, setProducts] = useState([]);
@@ -15,7 +16,8 @@ const Admin = () => {
   const [categoryName, setCategoryName] = useState('');
   const [categoryAdded, setCategoryAdded] = useState(false);
   const [cookies] = useCookies(["access_token"]);
-
+  const {  isAdmin } = useUserAPI(cookies.access_token);
+  
   useEffect(() => {
     fetchProducts();
     fetchCategories();
@@ -119,7 +121,10 @@ const Admin = () => {
 
   return (
     <div>
-      <h1>Admin Module</h1>
+      {isAdmin ? (
+        <>
+        
+          <h1>Admin Module</h1>
       <form onSubmit={handleAddCategory}>
         <label>
           Category Name:
@@ -228,6 +233,10 @@ const Admin = () => {
   <p>No categories found.</p>
 )}
 
+        </>
+      ) : (
+        <p>You do not have access to the admin module.</p>
+      )}
     </div>
   );
 };

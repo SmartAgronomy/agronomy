@@ -47,6 +47,7 @@ function Profile() {
               <p>Email: {profileData.email}</p>
               <p>Phone: {profileData.mobile}</p>
               <p>Location: {profileData.country} {profileData.state} {profileData.city}</p>
+              <p>User: {profileData.role}</p>
               <div className="dashboard">
               <Link to="/"><button>HOME</button></Link>
               </div>

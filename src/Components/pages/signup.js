@@ -2,11 +2,11 @@
 import './styles/signup.css';
 import { useEffect, useState } from 'react';
 import { useNavigate,Link, } from "react-router-dom";
-import reg_back from "./Images/reg-back.webp"
+import reg_back from "../Images/reg-back.webp"
 import AOS from "aos";
 import "aos/dist/aos.css";
-import eyeCloseIcon from "./Images/eye-slash-solid.svg"
-import eyeOpenIcon from "./Images/eye-regular.svg"
+import eyeCloseIcon from "../Images/eye-slash-solid.svg"
+import eyeOpenIcon from "../Images/eye-regular.svg"
 
 
 function SignupUpdated() {

@@ -1,19 +1,19 @@
-import Header from "./dashboard/header";
+import Header from "../dashboard/header";
 import emailjs from "emailjs-com"
-import Contact_footer from "./contact-footer";
-import phone_icon from "./Images/phone_icon.png"
-import Email from "./Images/email.webp"
-import Location from "./Images/loca.png"
-import Contact_background from "./Images/contact-background.jpg"
+import Contact_footer from "../headfooters/contact-footer";
+import phone_icon from "../Images/phone_icon.png"
+import Email from "../Images/email.webp"
+import Location from "../Images/loca.png"
+import Contact_background from "../Images/contact-background.jpg"
 import "./styles/contact.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
-import facebook from "./Images/facebook.jpg"
-import twitter from "./Images/i4.jpg"
-import instagram from "./Images/instagram_logo.webp"
-import youtube from "./Images/youtube_logo.png"
-import linked_in from "./Images/linked-in-logo.png"
+import facebook from "../Images/facebook.jpg"
+import twitter from "../Images/i4.jpg"
+import instagram from "../Images/instagram_logo.webp"
+import youtube from "../Images/youtube_logo.png"
+import linked_in from "../Images/linked-in-logo.png"
 
 function Contact(){
   const SentEmail=(e)=>{

@@ -1,4 +1,4 @@
-import Header from "./dashboard/header";
+import Header from "../dashboard/header";
 import './styles/privacy_policy.css'
 import AOS from 'aos'
 import "aos/dist/aos.css";

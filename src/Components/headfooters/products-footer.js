@@ -1,15 +1,15 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import footer_logo from "./Images/logo1.png"
-import email from "./Images/email.webp"
-import contact from "./Images/phone_icon.png"
-import location from "./Images/location.png"
-import facebook from "./Images/facebook.jpg"
-import twitter from "./Images/i4.jpg"
-import instagram from "./Images/instagram_logo.webp"
-import youtube from "./Images/youtube_logo.png"
-import linked_in from "./Images/linked-in-logo.png"
-import "./styles/products-footer.css"
+import footer_logo from "../Images/logo1.png"
+import email from "../Images/email.webp"
+import contact from "../Images/phone_icon.png"
+import location from "../Images/location.png"
+import facebook from "../Images/facebook.jpg"
+import twitter from "../Images/i4.jpg"
+import instagram from "../Images/instagram_logo.webp"
+import youtube from "../Images/youtube_logo.png"
+import linked_in from "../Images/linked-in-logo.png"
+import "../pages/styles/products-footer.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';

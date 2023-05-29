@@ -8,7 +8,7 @@ import Grass_cutter from "../Images/grass_cutter.webp"
 import Importance from "../Images/agri-importance.jpeg"
 import Market from "../Images/agri-rating.png"
 import Footer from "../dashboard/footer"
-import "../styles/Home-footer.css"
+import "../pages/styles/Home-footer.css"
 
 
 function Main(){

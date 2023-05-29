@@ -10,17 +10,22 @@ import FAQ from "../Images/FAQ_logo.jpeg"
 import sign_in from "../Images/sign_in.jpg"
 import Website_logo from "../Images/Rent_logo-removebg-preview.png"
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Profile from "../profile";
+import Profile from "../pages/profile";
 import logout_img from "../Images/logout-logo.png"
 import { useCookies } from "react-cookie";
 import { useState } from "react";
 import profile_img from "../Images/reg-user.png"
+import useUserAPI from "../useUserApi";
 
 function Header(){
 
   const [cookies, setCookies] = useCookies(["access_token"]);
  
   const navigate = useNavigate();
+
+  const { isLogged, isAdmin, setIsLogged } = useUserAPI(cookies.access_token);
+
+  console.log('isAdmin:', isAdmin);
 
 
 
@@ -34,8 +39,21 @@ function Header(){
   const logout = () => {
     setCookies("access_token", "");
     window.localStorage.clear();
+    setIsLogged(false);
     navigate("/");
+    window.location.reload();
   };
+  const adminRouter = () => {
+    if (isAdmin) {
+      return <li><Link to="/admin">admin</Link></li>;
+    }
+    return null;
+  };
+  
+  
+  
+  
+
 
     return(
     <header>
@@ -48,7 +66,8 @@ function Header(){
         <nav >
             <ul>
 
-            <li><Link to="admin">admin</Link></li>
+
+              {adminRouter()}
 
                  <li><Link to="/" class="root">Home</Link></li>
                  <hr class="home-underline"></hr>
@@ -138,7 +157,7 @@ function Header(){
             </div> */}
             
             <div class="button">
-                  {!cookies.access_token ? (
+                  {!cookies.access_token ?(
                     <>
                       <Link to="/signin">
                         <button>Sign in</button>

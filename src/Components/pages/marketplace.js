@@ -1,5 +1,5 @@
-import Header from "./dashboard/header";
-import Footer from "./dashboard/footer";
+import Header from "../dashboard/header";
+import Footer from "../dashboard/footer";
 
 function Marketplace(){
     return(

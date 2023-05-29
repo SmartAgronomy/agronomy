@@ -9,7 +9,7 @@ import twitter from "../Images/i4.jpg"
 import instagram from "../Images/instagram_logo.webp"
 import youtube from "../Images/youtube_logo.png"
 import linked_in from "../Images/linked-in-logo.png"
-import "../styles/Home-footer.css"
+import "../pages/styles/Home-footer.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';

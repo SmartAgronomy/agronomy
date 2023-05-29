@@ -1,26 +1,26 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import footer_logo from "./Images/logo1.png"
-import email from "./Images/email.webp"
-import contact from "./Images/phone_icon.png"
-import location from "./Images/location.png"
-import facebook from "./Images/facebook.jpg"
-import twitter from "./Images/i4.jpg"
-import instagram from "./Images/instagram_logo.webp"
-import youtube from "./Images/youtube_logo.png"
-import linked_in from "./Images/linked-in-logo.png"
-import "./styles/contact-footer.css"
+import footer_logo from "../Images/logo1.png"
+import email from "../Images/email.webp"
+import contact from "../Images/phone_icon.png"
+import location from "../Images/location.png"
+import facebook from "../Images/facebook.jpg"
+import twitter from "../Images/i4.jpg"
+import instagram from "../Images/instagram_logo.webp"
+import youtube from "../Images/youtube_logo.png"
+import linked_in from "../Images/linked-in-logo.png"
+import "../pages/styles/About-footer.css"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 
-function Contact_footer(){
+function About_footer(){
   useEffect(()=>{
      AOS.init({duration :2000})
   },[])
 
     return(
-        <div class="contact-footer-page"data-aos="fade-up">
+        <div class="about-footer-page"data-aos="fade-up">
         <div class='footer-left'>
           <img class="footer_logo" src={footer_logo} />
           <h1 class='agro'>Agro<h1 class="nomy">Nomy</h1></h1>
@@ -72,4 +72,4 @@ function Contact_footer(){
       </div>
     )
 }
-export default Contact_footer;
+export default About_footer;

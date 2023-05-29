@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./dashboard/header";
-import ProductsFooter from "./products-footer";
+import Header from "../dashboard/header";
+import ProductsFooter from "../headfooters/products-footer";
 import "./styles/products.css";
 import ProductList from "./productList";
 

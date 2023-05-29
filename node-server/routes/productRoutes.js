@@ -1,9 +1,6 @@
-
-
 const express = require('express');
-const productController = require('./productController');;
-const { verifyToken } = require('./middlewares/authuser');
-
+const productController = require('../controller/productController');
+const { verifyToken } = require('../middlewares/authuser');
 const router = express.Router();
 
 // Route to get all products
@@ -17,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // Route to add a product
-router.post('/',verifyToken, async (req, res) => {
+router.post('/', verifyToken,  async (req, res) => {
   const { productName, productDescription, amount, productImage, categoryId } = req.body;
 
   const result = await productController.addProduct(
@@ -35,7 +32,7 @@ router.post('/',verifyToken, async (req, res) => {
 });
 
 // Route to delete a product
-router.delete('/:id',verifyToken, async (req, res) => {
+router.delete('/:id', verifyToken,  async (req, res) => {
   const productId = req.params.id;
 
   const result = await productController.deleteProduct(productId);
@@ -47,7 +44,7 @@ router.delete('/:id',verifyToken, async (req, res) => {
 });
 
 // Route to edit a product
-router.put('/:id',verifyToken, async (req, res) => {
+router.put('/:id', verifyToken,  async (req, res) => {
   const productId = req.params.id;
   const updatedData = req.body;
 
@@ -60,3 +57,25 @@ router.put('/:id',verifyToken, async (req, res) => {
 });
 
 module.exports = router;
+
+
+
+// const express = require('express');
+// const productController = require('../controller/productController');
+// const { verifyToken } = require('../middlewares/authuser');
+
+// const router = express.Router();
+
+// // Route to get all products
+// router.get('/', productController.getProducts);
+
+// // Route to add a product
+// router.post('/', verifyToken, productController.addProduct);
+
+// // Route to delete a product
+// router.delete('/:id', verifyToken, productController.deleteProduct);
+
+// // Route to edit a product
+// router.put('/:id', verifyToken, productController.editProduct);
+
+// module.exports = router;

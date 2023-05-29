@@ -1,4 +1,4 @@
-const Category = require('./models/Category');
+const Category = require('../models/Category');
 
 // Function to get all categories
 const getCategories = async () => {
@@ -10,18 +10,6 @@ const getCategories = async () => {
   }
 };
 
-// Function to add a category
-// const addCategory = async (categoryName) => {
-//   try {
-//     const category = new Category({
-//       categoryName,
-//     });
-//     await category.save();
-//     return { success: true, message: 'Category added successfully' };
-//   } catch (error) {
-//     return { success: false, message: error.message };
-//   }
-// };
 const addCategory = async (categoryName) => {
   try {
     const category = new Category({ categoryName });

@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles/about.css"
-import Header from "./dashboard/header";
-import About_footer from "./about-footer.js";
-import about from "./Images/about.jpeg"
-import Contact from "./Images/phone_icon.png"
-import Email from "./Images/email.webp"
+import Header from "../dashboard/header";
+import About_footer from "../headfooters/about-footer";
+import about from "../Images/about.jpeg"
+import Contact from "../Images/phone_icon.png"
+import Email from "../Images/email.webp"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react'
