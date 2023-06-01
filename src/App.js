@@ -10,10 +10,9 @@ import About from "./Components/pages/about";
 import LoginUpdated from "./Components/pages/login";
 import Profile from "./Components/pages/profile";
 import Admin from "./Components/pages/admin";
-import AdminLogin from "./adminlogin";
+import Cart from "./Components/pages/cart";
 
-
-function App() {
+function App(cartItems, setCartItems) {
   return (
     <div className="App">
       
@@ -27,10 +26,10 @@ function App() {
           <Route path='contact' element={<Contact />}></Route>
           <Route path="about" element={<About /> } ></Route>
           <Route path="admin" element={<Admin />}></Route>
-          <Route path="adminlogin" element={<AdminLogin />}></Route>
           <Route path="blogs" element={<Blogs /> }></Route>
           <Route path="privacy_policy" element={<Privacy_Policy /> }></Route>
           <Route path="profile" element={<Profile/>}></Route>
+          <Route path="cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}></Route>
 
           
       </Routes>

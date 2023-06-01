@@ -13,13 +13,17 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Profile from "../pages/profile";
 import logout_img from "../Images/logout-logo.png"
 import { useCookies } from "react-cookie";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import profile_img from "../Images/reg-user.png"
 import useUserAPI from "../useUserApi";
+import axios from "axios";
+import "../pages/styles/cartcount.css"
 
 function Header(){
 
   const [cookies, setCookies] = useCookies(["access_token"]);
+
+  const [cartCount, setCartCount] = useState(0);
  
   const navigate = useNavigate();
 
@@ -30,11 +34,32 @@ function Header(){
 
 
 
-  //   const subMenu=document.getElementById("subMenu");
-  // function toggleMenu(){
-  //   subMenu.classList.toggle('open-menu');
+  useEffect(() => {
+    // Fetch the cart data and update the cartCount
+    const fetchCartCount = async () => {
+      const userId = localStorage.getItem("userID");
+      const token = cookies.access_token;
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
 
-  // }
+      try {
+        const response = await axios.post(
+          "http://localhost:8080/api/getCart",
+          { userId },
+          { headers }
+        );
+        const cartData = response.data.data.cart || [];
+        setCartCount(cartData.length);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    if (cookies.access_token) {
+      fetchCartCount();
+    }
+  }, [isLogged, cookies.access_token]);
 
   const logout = () => {
     setCookies("access_token", "");
@@ -62,7 +87,10 @@ function Header(){
             <input class="search-input" type="search"  placeholder="Search for Products..."/>
             <input class="search-btn" type="button" value="Search" />
           </div>
-          <img class="cart" src={cart} />
+          <Link to="cart" class="cart">
+        <img src={cart} />
+        {cartCount > 0 && <span class="cart-notification">{cartCount}</span>}
+      </Link>
         <nav >
             <ul>
 

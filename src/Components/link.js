@@ -6,8 +6,9 @@ import Blogs from "./blogs"
 import Marketplace from "./marketplace"
 import Products from "./products"
 import Dashboard from "./dashboard/Dashboard";
-import LoginUpdated from "./login-mithun";
+import LoginUpdated from "./login";
 import Signup from "./signup"
+import Cart from "./cart";
 
 
 
@@ -24,6 +25,7 @@ function Links(){
                  <Route path='contact' Component={Contact} />
                  <Route path="about" Component={About } />
                  <Route path="privacy_policy" Component={PrivacyPolicy } />
+                 <Route path="cart" Component={Cart } />
 
                </Routes>  
         </div>
